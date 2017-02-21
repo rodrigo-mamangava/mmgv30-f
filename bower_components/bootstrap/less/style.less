@@ -1,0 +1,309 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 21/02/2017, 15:13:39
+    Author     : rodri
+*/
+// Core variables and mixins
+@import "bootstrap.less";
+
+/*
+Font PLAU
+*/
+@import  "../../../css/font.less";
+
+/*
+Cores
+*/
+@rosa: #EE3F60;
+@verde:#39BA9C;
+@amarelo:#F3B518;
+@chumbo:#5F6E73;
+@cinza:#F0F0F0;
+@branco: #ffffff;
+
+
+/*
+Font set
+*/
+@tamanha_linha: 200%;
+
+@cor_fonte_geral: white;
+
+@fonte_pq: 13pt;
+@fonte_md: 18pt;
+@fonte_gr: 20pt;
+
+@plau_li: 'Plau-Light';
+@plau_re: 'Plau-Regular';
+@plau_bo: 'Plau-Bold';
+
+h2, h3, p, li{
+    text-shadow: 0 2px 1px @chumbo;
+}
+
+h1{
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+h2{
+    font-size: @fonte_gr;
+    font-family: @plau_bo;
+    color: @branco;
+    text-align: left;
+}
+h3{
+    font-size: @fonte_gr;
+    font-family: @plau_bo;
+    color: @branco;
+    text-align: left; 
+}
+
+p{
+    font-size: @fonte_md;
+    font-family: @plau_li;
+    text-align: left;
+    color: #fff;
+}
+
+
+
+/*
+Reset
+*/
+a{
+    cursor: pointer;
+    &:hover, &:active{
+        text-decoration: none;
+    }
+}
+
+/*
+Geral
+*/
+body{
+    position: relative;
+    //padding-top: 56px;
+    font-family: @plau_re;
+    font-size: @fonte_md;
+
+}
+
+/*
+NAV
+**/
+.navbar{
+
+    h2, h3, p, li{
+        text-shadow: none;
+    }
+
+    .navbar-nav {
+        display: inline-block;
+        float: none;
+        height: 40px;
+    }
+
+    .navbar-collapse {
+        text-align: center;
+    }   
+}
+
+#navbar-mmgv{
+    ul{
+        font-size: @fonte_pq;
+        .text-uppercase;
+        li{
+            a{
+                color: @chumbo;
+            }
+        }
+    }
+}
+
+
+
+
+
+/*
+FAIXA 
+**/
+.faixa{
+    min-height: 100vh;
+    padding-top:70px;
+
+    li{
+        font-size: @fonte_md;
+        font-family: @plau_li;
+        text-align: left;
+        color: #fff;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+    li {
+        padding-left: 1.3em;
+    }
+    li:before {
+        content: "\f046"; /* FontAwesome Unicode */
+        font-family: FontAwesome;
+        display: inline-block;
+        margin-left: -1.3em; /* same as padding-left set on li */
+        width: 1.3em; /* same as padding-left set on li */
+        font-size: 20px;
+    }
+
+
+
+}
+/*
+FAIXA PORTIFOLIO
+**/
+.port{
+
+    //min-height: auto;
+    padding-top:51px;
+
+
+    .row{
+        &>div{
+            padding-right: 0px;
+            padding-left: 0px;
+        }
+    }
+
+
+
+    .port-item{
+        background-position: 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+        z-index: 50;
+        height: 31.5vh;
+        width: 100%;
+        padding: 15px 25px; 
+        z-index: 100;
+
+        .info{
+            display: none;
+        }
+
+        &:hover{
+            .info{
+                position: relative;
+                z-index: 200;
+                display: initial;
+                background-color: red;
+            }  
+        }
+
+
+
+
+
+        h2{
+            margin: 0;
+            color: #fff;
+        }
+        p{
+            color: #fff;
+        }
+
+    }
+
+}
+
+/*
+FAIXA PORTIFOLIO
+**/
+.port-area-btn{
+    background-color: @rosa; 
+    padding: 50px;
+    .text-center;
+
+    .btn-port{
+        .btn;
+        .button-variant(white; transparent; white);       
+        width: 250px;
+        border-radius: 0;
+    }
+
+}
+
+/*
+FAIXA COMO
+**/
+.faixa-como{
+    background-color: @amarelo;
+
+    h2{
+        .text-center;
+    }
+
+    .sessao1, .sessao2{
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .sessao1{
+        h2{
+            font-size: 7.0rem;
+            line-height: 25px;
+        }
+    }
+    .sessao2{
+        h2{
+            text-align: left;
+        }
+    }
+
+
+}
+
+/*
+.faixa-porque
+*/
+.faixa-porque{
+    background-color: @chumbo;
+
+    h2, h3, p, li{
+        text-shadow: 0 2px 1px #000;
+    }
+
+    h2{
+        font-size: 7.0rem;
+    }
+
+    h3{
+        color: @amarelo;
+    }
+
+    img.custo{
+        width: 100%;
+        height: auto;
+    }
+
+    .sessao2{
+        padding-top: 50px;
+    }
+
+}
+
+.faixa-contato{
+    h2, h3, p, li{
+        text-shadow: none;
+    }
+
+    h2{
+        color: @rosa;
+    }
+}
